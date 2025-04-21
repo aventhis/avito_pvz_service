@@ -27,6 +27,23 @@
 
 ## Запуск проекта
 
+### Через Makefile
+
+В проекте есть Makefile, который упрощает работу с приложением:
+
+```
+make help            # Показать список доступных команд
+make build           # Собрать приложение
+make run             # Запустить приложение
+make test            # Запустить тесты
+make cover           # Запустить тесты с покрытием
+make cover-html      # Сгенерировать HTML-отчет о покрытии
+make clean           # Очистить артефакты сборки
+make docker-build    # Собрать Docker-образ
+make docker-run      # Запустить в Docker Compose
+make docker-stop     # Остановить Docker Compose
+```
+
 ### Через Docker Compose
 
 1. Клонируйте репозиторий:

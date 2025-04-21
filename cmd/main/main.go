@@ -5,9 +5,9 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/aventhis/avito_pvz_service/pkg/api"
-	"github.com/aventhis/avito_pvz_service/pkg/auth"
-	"github.com/aventhis/avito_pvz_service/pkg/storage/postgres"
+	"github.com/aventhis/avito_pvz_service/internal/api"
+	"github.com/aventhis/avito_pvz_service/internal/auth"
+	"github.com/aventhis/avito_pvz_service/internal/storage/postgres"
 )
 
 func main() {

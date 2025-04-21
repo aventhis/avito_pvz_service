@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    environment:
+      - DB_URL=postgres://postgres:postgres@db:5432/postgres?sslmode=disable
+      - JWT_SECRET=your-secret-key
+      - PORT=8080
+    restart: always
+
+  db:
+    image: postgres:14
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=postgres
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    restart: always
+
+volumes:
+  pgdata: 

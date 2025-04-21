@@ -39,7 +39,7 @@ func TestIntegration(t *testing.T) {
 	}
 
 	// 2. Создаем приемку
-	reception, err := createReception(apiService, employeeToken, pvz.ID)
+	_, err = createReception(apiService, employeeToken, pvz.ID)
 	if err != nil {
 		t.Fatalf("Ошибка при создании приемки: %v", err)
 	}
